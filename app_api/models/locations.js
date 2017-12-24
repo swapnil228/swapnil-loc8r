@@ -38,7 +38,8 @@ var locationSchema = new mongoose.Schema({
     type: Number,
     "default": 0,
     min: 0,
-    max: 5
+    max: 5,
+    required: true
   },
   facilities: [String],
   coords: {
