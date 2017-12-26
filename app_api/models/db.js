@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var dbURI = 'mongodb://localhost/Loc8r';
+dbURI = 'mongodb://swapnil:12345@ds131137.mlab.com:31137/swapnil-db';
 if (process.env.NODE_ENV === 'production') {
 dbURI = process.env.MONGOLAB_URI;
 console.log(process.env.MONGOLAB_URI);
