@@ -1,0 +1,57 @@
+db.locations.save({
+  name: 'BSR Mantralaya',
+  address: '125 High Street, Reading, RG6 1PS',
+  rating: 3,
+  facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+  coords: [77.6447500, 12.9038300],
+  openingTimes: [{
+    days: 'Monday - Friday',
+    opening: '7:00am',
+    closing: '7:00pm',
+    closed: false
+  }, {
+    days: 'Saturday',
+    opening: '8:00am',
+    closing: '5:00pm',
+    closed: false
+  }, {
+    days: 'Sunday',
+    closed: true
+  }],
+  reviews: {
+    author: 'Simon Holmes',
+    id: ObjectId(),
+    rating: 5,
+    timestamp: new Date("Jul 16, 2013"),
+    reviewText: "What a great place. I can't say enough good things about it."
+  }
+})
+
+db.locations.save({
+  name: 'Purva Apt',
+  address: '125 High Street, Reading, RG6 1PS',
+  rating: 3,
+  facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+  coords: [77.6449700, 12.9067800],
+  openingTimes: [{
+    days: 'Monday - Friday',
+    opening: '7:00am',
+    closing: '7:00pm',
+    closed: false
+  }, {
+    days: 'Saturday',
+    opening: '8:00am',
+    closing: '5:00pm',
+    closed: false
+  }, {
+    days: 'Sunday',
+    closed: true
+  }],
+  reviews: {
+    author: 'Simon Holmes',
+    id: ObjectId(),
+    rating: 5,
+    timestamp: new Date("Jul 16, 2013"),
+    reviewText: "What a great place. I can't say enough good things about it."
+  }
+})

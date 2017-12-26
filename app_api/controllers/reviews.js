@@ -1,4 +1,5 @@
 var doAddReview = function(req, res, location) {
+  console.log("doAddreview got called");
   if (!location) {
     sendJsonResponse(res, 404, {
       "message": "locationid not found"
@@ -55,13 +56,16 @@ var doSetAverageRating = function(location) {
 
 
 module.exports.reviewsCreate = function(req, res) {
+  console.log("reviewsCreate got called");
   var locationid = req.params.locationid;
   if (locationid) {
+    console.log(locationid);
     Loc
       .findById(locationid)
       .select('reviews')
       .exec(
         function(err, location) {
+          console.log("Trap1")
           if (err) {
             sendJsonResponse(res, 400, err);
           } else {
@@ -70,6 +74,7 @@ module.exports.reviewsCreate = function(req, res) {
         }
       );
   } else {
+
     sendJsonResponse(res, 404, {
       "message": "Not found, locationid required"
     });
