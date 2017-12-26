@@ -189,7 +189,8 @@ module.exports.doAddReview = function(req, res) {
           "ValidationError") {
           res.redirect('/location/' + locationid + '/reviews/new?err=val');
         } else {
-          console.log(body);
+          console.log("Trap 3");
+          //console.log(body);
           _showError(req, res, response.statusCode);
         }
       }

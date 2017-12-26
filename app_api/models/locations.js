@@ -47,7 +47,7 @@ var locationSchema = new mongoose.Schema({
   },
   openingTimes: [openingTimeSchema],
   reviews: [reviewSchema]
-
-});
+},
+{usePushEach: true});
 
 mongoose.model('Location', locationSchema);

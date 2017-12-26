@@ -21,6 +21,7 @@ var doAddReview = function(req, res, location) {
     location.save(function(err, location) {
       var thisReview;
       if (err) {
+        console.log("Trap 2");
         sendJSONresponse(res, 400, err);
       } else {
         updateAverageRating(location._id);
