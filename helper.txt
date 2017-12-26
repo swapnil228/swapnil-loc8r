@@ -1,3 +1,15 @@
+mongodump -h localhost:27017 -d Loc8r -o temp/mongodump
+
+
+mongo ds131137.mlab.com:31137/swapnil-db -u swapnil -p 12345
+
+mongorestore -h ds131137.mlab.com:31137 -d swapnil-db -u swapnil -p 12345 temp/mongodump/Loc8r
+
+
+To connect using a driver via the standard MongoDB URI (what's this?):
+mongodb://<dbuser>:<dbpassword>@ds131137.mlab.com:31137/swapnil-db
+
+
 db.locations.save({
   name: 'BSR Mantralaya',
   address: '125 High Street, Reading, RG6 1PS',
